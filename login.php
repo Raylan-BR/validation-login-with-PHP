@@ -75,7 +75,7 @@
             $autenticado = 0;
             //criamos uma conexão com o banco de dados
             $db = new SQLite3("banco.db");
-            $lista = $db->query("SELECT * FROM usuarios");
+            $lista = $db->query("SELECT email, senha FROM usuarios");
 
             while($ref = $lista->fetchArray()){
                 if($email == $ref["email"] && $senha == $ref["senha"]){
