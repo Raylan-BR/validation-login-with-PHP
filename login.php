@@ -81,6 +81,9 @@
                 if($email == $ref["email"] && $senha == $ref["senha"]){
                     echo "sucesso";
                     $autenticado = 1;
+                    //redirecionar a tela de login para a tela com a lista de usuarios
+                    header("location: lista_usuarios.php");
+                    exit;
                     break;
                 }
             }
